@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>SKE48 ーあなただけの推しメン記録ー </h1>
+
+  <p>
+    このサイトはあなただけの推しメンの活動を記録するサイトです。
+  </p>
+
+  <p id="notice"><%= notice %></p>
+
+  <h2>Albums</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Person</th>
+        <th>Keyword1</th>
+        <th>Keyword2</th>
+        <th>Keyword3</th>
+        <th>name</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @albums.each do |album| %>
+        <tr>
+          <td><%= album.person %></td>
+          <td><%= album.keyword1 %></td>
+          <td><%= album.keyword2 %></td>
+          <td><%= album.keyword3 %></td>
+          <td><%= album.name %></td>
+          <td><%= link_to 'Show', album %></td>
+          <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-default"><a href="http://192.168.33.1:3000/albums/new">アルバムを作成する</button>
+  </div>
+</div>

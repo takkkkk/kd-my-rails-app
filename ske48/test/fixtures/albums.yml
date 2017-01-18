@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person: MyString
+  string: MyString
+  keyword1: MyString
+  string: MyString
+  keyword2: MyString
+  string: MyString
+  keyword3: MyString
+  string: MyString
+  name: MyString
+  string: MyString
+
+two:
+  person: MyString
+  string: MyString
+  keyword1: MyString
+  string: MyString
+  keyword2: MyString
+  string: MyString
+  keyword3: MyString
+  string: MyString
+  name: MyString
+  string: MyString
