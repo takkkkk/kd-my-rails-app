@@ -5,6 +5,7 @@ class AlbumsController < ApplicationController
   # GET /books.json
   def index
     @albums = Album.all
+    @people = Person.all
   end
 
   # GET /books/1
@@ -14,7 +15,8 @@ class AlbumsController < ApplicationController
 
   # GET /books/new
   def new
-    @album = Album.new
+    @album  = Album.new
+    @people = Person.all
   end
 
   # GET /books/1/edit
@@ -25,7 +27,6 @@ class AlbumsController < ApplicationController
   # POST /books.json
   def create
     @album = Album.new(album_params)
-
     respond_to do |format|
       if @album.save
         format.html { redirect_to @album, notice: 'Album was successfully created.' }
