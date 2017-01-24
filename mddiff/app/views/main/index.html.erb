@@ -1,0 +1,42 @@
+<div class="container">
+<h1>MDdiff</h1>
+<p>Markdownを比較するWebアプリ</a></p>
+
+<%= form_tag({controller: :main, action: :convert}) do %>
+  <div class="clearfix">
+    <div class="form-group">
+      <%= text_area_tag "input-markdown", @input_md, class: "form-control", rows: 6, placeholder: "ここにMarkdownで入力..." %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "変換", class: "btn btn-primary btn-lg pull-right" %>
+    </div>
+  </div>
+<% end %>
+
+<%= form_tag({controller: :main, action: :convert}) do %>
+  <div class="form-group">
+    <%= label_tag "Pandoc:" %>
+    <%= text_area_tag "output-pandoc", @output_pandoc, class: "form-control", rows: 6 %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag "GitHub Flavored Markdown:" %>
+    <%= text_area_tag "output-gfm", @output_github, class: "form-control", rows: 6 %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag "MultiMarkdown:" %>
+    <%= text_area_tag "output-mmd", @output_multi, class: "form-control", rows: 6 %>
+  </div>
+<% end %>
+
+<h2>実行履歴</h2>
+
+<ul>
+<% @histories.each do |history|  %>
+  <li><%= link_to history.time_exec, convert_path(history) %></li>
+<% end %>
+</ul>
+
+</div>
