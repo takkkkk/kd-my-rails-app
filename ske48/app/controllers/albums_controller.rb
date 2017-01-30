@@ -5,7 +5,6 @@ class AlbumsController < ApplicationController
   # GET /books.json
   def index
     @albums = Album.all
-    @people = Person.all
   end
 
   # GET /books/1

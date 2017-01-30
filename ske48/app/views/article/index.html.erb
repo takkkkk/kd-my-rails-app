@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>SKE48 ーあなただけの推しメン記録ー </h1>
+
+  <p>
+    このサイトはあなただけの推しメンの活動を記録するサイトです。
+  </p>
+
+  <p id="notice"><%= notice %></p>
+
+  <h2>Albums</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <!-- <th>URL</th> -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><a href="<%=article.url%>"><%= article.title %></a></td>
+          <!-- <td><%= article.url %></td> -->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'Back', albums_path %>
+</div>
