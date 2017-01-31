@@ -3,7 +3,7 @@ class ArticleController < ApplicationController
     @articles = Article.all
   end
 
-  def parseHTML
+  def parseHTML 
     @articles = Article.new
 
     require 'nokogori'
@@ -13,8 +13,10 @@ class ArticleController < ApplicationController
     x = doc.xpath('//h2')
 
     x.xpath('.//a').each do |title|
-      puts title.inner_text
-      puts title[:href]
+      @articles[:title] = title.inner_text
+      @articles[:url] = title[:href]
     end
+
+
   end
 end

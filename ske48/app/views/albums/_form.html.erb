@@ -10,12 +10,13 @@
       </ul>
     </div>
   <% end %>
+
   <div class="container">
     <div class="field">
       <%= f.label :person %>
-      <%= f.text_field :person %>
+      <%= f.collection_select :person, Person.all, :person_name, :person_name %>
     </div>
-    <%= select_tag('person_name', options_from_collection_for_select(@people, :person_name, :person_name)) %>
+    <!-- <%= select_tag('person_name', options_from_collection_for_select(@people, :person_name, :person_name)) %> -->
 
     <div class="field">
       <%= f.label :keyword1 %>
