@@ -21,7 +21,12 @@
       <% @articles.each do |article| %>
         <tr>
           <td><a href="<%=article.url%>"><%= article.title %></a></td>
-          <!-- <td><%= article.url %></td> -->
+        </tr>
+      <% end %>
+
+      <% @article.each do |article1| %>
+        <tr>
+          <td><a href="<%=article1.url%>"><%= article1.title %></a></td>
         </tr>
       <% end %>
     </tbody>
