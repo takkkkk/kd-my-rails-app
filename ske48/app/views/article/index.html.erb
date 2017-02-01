@@ -9,6 +9,8 @@
 
   <h2>Albums</h2>
 
+  <%= page_entries_info @pages %>
+
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -26,6 +28,8 @@
 
     </tbody>
   </table>
+
+  <%= paginate @pages %>
 
   <%= link_to 'Back', albums_path %>
 </div>

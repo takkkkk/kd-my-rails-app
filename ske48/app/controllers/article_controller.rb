@@ -29,12 +29,8 @@ class ArticleController < ApplicationController
         @article.save
       end
       @articles = Article.all
+      @pages = Article.page(params[:page]).per(10).order(:id)
     end
-
-    # @articles = Article.all
-
-    # binding.pry
-    # @articles = Article.all
   end
 
 end
