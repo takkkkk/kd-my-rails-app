@@ -9,7 +9,6 @@
 
   <h2>Albums</h2>
 
-  <%= page_entries_info @pages %>
 
   <table class="table table-bordered">
     <thead>
@@ -20,7 +19,7 @@
     </thead>
 
     <tbody>
-      <% @articles.each do |article| %>
+      <% @articles.reverse.each do |article| %>
         <tr>
           <td><a href="<%=article.url%>"  target="_blank"><%= article.title %></a></td>
         </tr>
@@ -29,7 +28,6 @@
     </tbody>
   </table>
 
-  <%= paginate @pages %>
 
   <%= link_to 'Back', albums_path %>
 </div>

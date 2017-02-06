@@ -24,4 +24,3 @@ Article.create(:title => "SKE48メンバーのオフショットはかわいい�
 Article.create(:title => "SKE48支配人 湯浅洋「メンバー衣装着用撮影コーナーは、初めての試みでしたが、女性のお客様には楽しんで頂けたようで、良かったです^ ^」", :url => "http://www.ske48matoeme.com/archives/50543364.html")
 Article.create(:title => "12月のカンガルーの衣装を着たSKE48酒井萌衣がかわいすぎる！！！", :url => "http://www.ske48matoeme.com/archives/50543599.html")
 Article.create(:title => "SKE48北川綾巴のニットがいい仕事してる！！！", :url => "http://www.ske48matoeme.com/archives/50543261.html")
-Article.create(:title => "宮澤佐江ちゃん（26歳）の作った卵焼きｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗｗW", :url => "http://www.ske48matoeme.com/archives/50544431.html")
