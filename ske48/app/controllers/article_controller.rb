@@ -35,8 +35,11 @@ class ArticleController < ApplicationController
 
 
 
-      # 同じ記事がなければ保存
+      # @articles = Article.allに記事がない場合
+
       if i==0
+
+        # keyword1~3の単語を含んでいる記事だけ保存
         n = 0
         while n < 3 do
           if @article.title.include?(@keyword[n])
@@ -47,5 +50,8 @@ class ArticleController < ApplicationController
       end
     end
     @articles = Article.all.reverse
+  end
+
+  def show
   end
 end
